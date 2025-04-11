@@ -137,11 +137,15 @@ class _MapsV1PageState extends State<MapsV1Page> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      name,
-                      style: const TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
+                    Container(
+                      width: 200,
+                      child: Text(
+                        name,
+                        style: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          overflow: TextOverflow.ellipsis,
+                        ),
                       ),
                     ),
                     Row(
@@ -191,7 +195,6 @@ class _MapsV1PageState extends State<MapsV1Page> {
         case Type.Satellite:
           mapType = MapType.satellite;
           break;
-        default:
       }
     });
   }
